@@ -3,7 +3,7 @@ var current_table;
 
 
 $( document ).ready(function() {
-$.getScript("js/con2fig.js", function(){
+$.getScript("js/config.js", function(){
    
    alert("asd")
    getTablesAjax()
