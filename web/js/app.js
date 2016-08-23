@@ -4,8 +4,6 @@ var current_table;
 
 $( document ).ready(function() {
 $.getScript("js/config.js", function(){
-   
-   alert("asd")
    getTablesAjax()
    getDishesAjax()
    
@@ -109,7 +107,6 @@ function finishAjax()
 
 function draw_orders(orders)
 {
-    console.log(orders)
     $("#orders_append").empty()
     $("#finish_button").remove()
     
