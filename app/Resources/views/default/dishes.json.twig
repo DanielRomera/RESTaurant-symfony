@@ -1,0 +1,10 @@
+[
+        {% for dish in dishes %}
+        {
+            "id": "{{ dish.id }}",
+            "image": "{{ dish.image }}",
+            "name": "{{ dish.name }}",
+            "description": "{{ dish.description }}"
+        }{% if not loop.last %},{% endif %}        
+        {% endfor %}
+]

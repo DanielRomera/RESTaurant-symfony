@@ -1,0 +1,20 @@
+AppBundle\Entity\Tables:
+    type: entity
+    table: Tables    
+    id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO       
+    fields:
+        number:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+    oneToMany:
+        orders:
+            targetEntity: Orders
+            mappedBy: table
+    lifecycleCallbacks: {  }

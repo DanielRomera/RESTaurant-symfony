@@ -1,0 +1,15 @@
+tables:
+    path:      /tables
+    defaults:  { _controller: AppBundle:Restaurant:tables}
+orders:
+    path:      /orders/{current_table}
+    defaults:  { _controller: AppBundle:Restaurant:orders}    
+dishes:
+    path:      /dishes
+    defaults:  { _controller: AppBundle:Restaurant:dishes}
+order:
+    path:      /order
+    defaults:  { _controller: AppBundle:Restaurant:create_order}    
+finish:
+    path:      /finish
+    defaults:  { _controller: AppBundle:Restaurant:finish}        

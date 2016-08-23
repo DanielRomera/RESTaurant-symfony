@@ -1,0 +1,26 @@
+AppBundle\Entity\Orders:
+    type: entity
+    table: Orders
+    repositoryClass: AppBundle\Entity\Repositories\OrdersRepository
+    id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO       
+    fields:
+        quantity:
+            type: integer
+    manyToOne:
+      dish:
+        targetEntity: Dishes
+        inversedBy: orders
+        joinColumn:
+          name: idDish
+          referencedColumnName: id
+      table:
+        targetEntity: Tables
+        inversedBy: orders
+        joinColumn:
+          name: idTable
+          referencedColumnName: id            
+    lifecycleCallbacks: {  }

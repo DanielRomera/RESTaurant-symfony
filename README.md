@@ -1,2 +1,4 @@
-# RESTaurant-symfony
-Restaurant with a REST service backend to handle the orders in a restaurant
+symfony
+=======
+
+A Symfony project created on May 10, 2016, 12:33 am.

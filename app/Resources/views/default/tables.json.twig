@@ -1,0 +1,8 @@
+[
+        {% for table in tables %}
+        {
+            "id": {{ table.id }},
+            "number": "{{ table.number }}"
+        }{% if not loop.last %},{% endif %}        
+        {% endfor %}
+]

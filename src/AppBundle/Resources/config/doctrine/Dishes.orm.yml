@@ -1,0 +1,37 @@
+AppBundle\Entity\Dishes:
+    type: entity
+    table: Dishes
+    id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO    
+    fields:
+        price:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+        image:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+    oneToMany:
+        orders:
+            targetEntity: Orders
+            mappedBy: dish
+    lifecycleCallbacks: {  }
